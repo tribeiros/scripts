@@ -1,0 +1,3 @@
+Acquire::http::Proxy "http://tribeiros:Santander796736II!@proxylatam.indra.es:8080";
+Acquire::https::Proxy "http://tribeiros:Santander796736II!@proxylatam.indra.es:8080";
+Acquire::ftp::Proxy "http://tribeiros:Santander796736II!@proxylatam.indra.es:8080";
