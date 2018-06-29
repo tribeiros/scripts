@@ -30,6 +30,6 @@ do
   else
     printf "${green}$date${nc}${blue} - Conexões em${nc} ${yellow}$n${nc}\n"
     n=`netstat -an | grep $port | grep -i EST | wc -l`
-  fi
+  ficd
   sleep $ttl
 done
