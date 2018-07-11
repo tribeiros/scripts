@@ -35,5 +35,5 @@ devrmlog(){
 }
 
 #execute
-devrmlog
-#rmlog
+#devrmlog
+rmlog
