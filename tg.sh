@@ -3,24 +3,31 @@
 #tribeiros@indracompany.com
 
 #Variables 
-#chatid
-MSG=$1 #message
-botToken='bot572938288:AAGFrgJIdj6dDiPgIgMDuCSNK5VtsBa7O4U' #xalmxbot
-#chatId='-272973710' #xansiblex group  
-chatId='-242284498' #indra group  
+URL=https://api.telegram.org/
+botToken=bot535199740:AAGhxdpQz5XDW8oSD8JYdpE0aRdXdUZwRrU #xtgxbot
+ansibleGroup=(-272973710 ansible)
+indraGroup=(-242284498 indra)
+testGroup=(-220750192 test)
+GROUP=$1
+MSG=$2 #message
 
 #Validating user arguments
-#if [ ! $1 ]; then
-#  echo "missing"
-#  exit
-#fi
+if [[ ! $2 ]]; then
+  echo "missing arguments"
+  exit
+fi
 
 #validating groups
-#  if [ "$CID" -eq "$INDRA" ]; then
-#    export CID='-272973710'
-#  else
-#     export CID='-242284498'
-#  fi
+sendMessage() {
+if [[ "$GROUP" == *"${testGroup[1]}"* ]] ;then
+  chatId=${testGroup[0]}
+elif [[ "$GROUP" == *"${indraGroup[1]}"* ]] ;then
+  chatId=${indraGroup[0]}
+else
+  chatId=${ansibleGroup[0]}
+fi
+curl -s -X POST "${URL}${botToken}/sendMessage" -d "chat_id=${chatId}&text=${MSG}" > /dev/null
+}
 
 #exec
-curl -s -X POST "https://api.telegram.org/${botToken}/sendMessage" -d "chat_id=${chatId}&text=${MSG}" > /dev/null
+sendMessage
