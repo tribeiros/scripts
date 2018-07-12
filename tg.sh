@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script to message on telegram group on CLI
+#Script to message group telegram on CLI
 #tribeiros@indracompany.com
 
 # with query above, we get every data for variables
