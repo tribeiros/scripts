@@ -1,6 +1,9 @@
 #!/bin/bash
-#Script to message on telegram group
+#Script to message on telegram group on CLI
 #tribeiros@indracompany.com
+
+# with query above, we get every data for variables
+#https://api.telegram.org/bot<botToken>/getUpdates
 
 #Variables 
 URL=https://api.telegram.org/ #telegram uri
@@ -19,7 +22,7 @@ if [[ ! $2 ]]; then
 fi
 
 #validating groups
-# function validate names of groups and define each for curl command
+# function for validate names of groups and define each for curl command
 sendMessage() {
 if [[ "$GROUP" == *"${testGroup[1]}"* ]] ;then
   chatId=${testGroup[0]}
@@ -31,5 +34,5 @@ fi
 curl -s -X POST "${URL}${botToken}/sendMessage" -d "chat_id=${chatId}&text=${MSG}" > /dev/null
 }
 
-#exec
+#execute function
 sendMessage
