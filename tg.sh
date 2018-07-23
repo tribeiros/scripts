@@ -7,7 +7,7 @@
 
 #Variables 
 URL=https://api.telegram.org/ #telegram uri
-botToken=bot664542723:AAEp4k_ccv-1Hx39FwkR38bhnajuhNSpspI # tribeirosBot made with botfather
+botToken=bot692434184:AAExnvOURBZojmoivxHt7SVflEH9XyXb3U8 # tribeirosBot made with botfather
 ansibleGroup=(-272973710 ansible) #array with chat_id and name
 indraGroup=(-242284498 indra) #array with chat_id and name
 testGroup=(-220750192 test) #array with chat_id and name
